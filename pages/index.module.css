@@ -1,0 +1,275 @@
+.container {
+  padding: 0 32px;
+}
+
+.descriptionHeader {
+  font-family: var(--font-russo);
+  color: var(--color-asteroid);
+  text-align: center;
+  font-size: 3vmin;
+  padding-top: 6vmin;
+  text-transform: uppercase;
+}
+
+.logoHeader {
+  font-family: "Another America", sans-serif;
+  color: var(--color-red);
+  text-align: center;
+  font-size: 15vmin;
+}
+
+.itemsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -24px;
+  margin-right: -24px;
+}
+
+.itemContainer {
+  width: 100%;
+  padding: 8px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.itemContainer::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(7px);
+}
+
+@media all and (min-width: 575px) {
+  .itemContainer {
+    width: 50%;
+  }
+}
+@media all and (min-width: 767px) {
+  .itemContainer {
+    width: 33.333%;
+  }
+}
+@media all and (min-width: 991px) {
+  .itemContainer {
+    width: 25%;
+  }
+}
+@media all and (min-width: 1199px) {
+  .itemContainer {
+    width: 20%;
+  }
+}
+
+.itemContainerWrapper {
+  padding: 16px;
+}
+
+.itemImage {
+  height: 250px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 2vmin;
+}
+
+@media all and (min-width: 767px) {
+  .itemImage {
+    height: 300px;
+  }
+}
+
+@media all and (min-width: 991px) {
+  .itemImage {
+    height: 400px;
+  }
+}
+
+.itemHeaderWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 18vmin;
+}
+
+.itemHeader {
+  font-size: 7vmin;
+  line-height: 9vmin;
+  font-family: var(--font-russo);
+  text-transform: uppercase;
+}
+.itemHeader.asteroid {
+  color: var(--color-asteroid);
+}
+.itemHeader.orbit {
+  color: var(--color-orbit);
+}
+.itemHeader.jam {
+  color: var(--color-jam);
+}
+.itemHeader.dreams {
+  color: var(--color-dreams);
+}
+.itemHeader.gravity {
+  color: var(--color-gravity);
+}
+@media all and (min-width: 575px) {
+  .itemHeader {
+    font-size: 3.5vmin;
+    line-height: 4.5vmin;
+  }
+  .itemHeaderWrapper {
+    height: 9vmin;
+    margin-bottom: 1vmin;
+  }
+}
+
+.itemCapacity {
+  font-size: 3.5vmin;
+  margin-bottom: 3vmin;
+  color: var(--color-grey);
+}
+@media all and (min-width: 575px) {
+  .itemCapacity {
+    font-size: 2vmin;
+  }
+}
+
+.itemDescription {
+  font-size: 4.5vmin;
+  color: var(--color-grey);
+}
+@media all and (min-width: 575px) {
+  .itemDescription {
+    font-size: 2.5vmin;
+  }
+}
+
+.itemButtonWrapper {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.itemButton {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border-style: solid;
+  border-width: 2px;
+  font-size: 5vmin;
+  font-weight: 600;
+  line-height: 8vmin;
+  text-transform: uppercase;
+}
+.itemButton.asteroid {
+  color: var(--color-asteroid);
+  border-color: var(--color-asteroid);
+}
+.itemButton.orbit {
+  color: var(--color-orbit);
+  border-color: var(--color-orbit);
+}
+.itemButton.jam {
+  color: var(--color-jam);
+  border-color: var(--color-jam);
+}
+.itemButton.dreams {
+  color: var(--color-dreams);
+  border-color: var(--color-dreams);
+}
+.itemButton.gravity {
+  color: var(--color-gravity);
+  border-color: var(--color-gravity);
+}
+@media all and (min-width: 575px) {
+  .itemButton {
+    font-size: 3vmin;
+    line-height: 5vmin;
+  }
+}
+
+.orderContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-grey);
+}
+
+.orderFormWrapper {
+  padding: 32px;
+  max-width: 600px;
+  position: relative;
+  width: calc(100vw - 32px);
+  box-sizing: border-box;
+}
+
+.orderFormWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(7px);
+  z-index: -1;
+}
+
+.orderFormHeading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.orderForm {
+  margin-bottom: 1rem;
+}
+
+.orderFormControl {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.orderFormInput {
+  background-color: transparent;
+  margin: 0;
+  border: solid 1px var(--color-grey);
+  color: var(--color-grey);
+  font-size: 1.3rem;
+  line-height: 1rem;
+  height: 3rem;
+  padding: 12px 12px 18px;
+  margin-bottom: 1rem;
+}
+
+.orderFormButton {
+  background-color: var(--color-red);
+  margin: 0;
+  border: none;
+  color: var(--color-grey);
+  font-size: 1.3rem;
+  line-height: 1rem;
+  height: 3rem;
+  padding: 12px 12px 18px;
+}
+
+.orderFormPhone {
+  color: var(--color-orbit);
+  font-size: 2rem;
+  font-family: var(--font-russo);
+}

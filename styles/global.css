@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Russo+One&display=swap");
+
+@font-face {
+  font-family: "Another America";
+  src: url("../public/fonts/another_america-webfont.woff2") format("woff2"),
+    url("../public/fonts/another_america-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  --color-asteroid: #92c149;
+  --color-orbit: #d83538;
+  --color-jam: #d6287c;
+  --color-dreams: #f7ea51;
+  --color-gravity: #2c94c3;
+  --color-red: #d53538;
+  --color-grey: #bebebe;
+
+  --font-russo: "Russo One", sans-serif;
+
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url("../public/images/body-background.jpeg");
+  background-position: 50% 0;
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
+}
