@@ -75,21 +75,21 @@
   padding: 16px;
 }
 
-.itemImage {
+.itemImageWrapper {
   height: 250px;
-  max-width: 100%;
   display: block;
-  margin: 0 auto 2vmin;
+  position: relative;
+  margin-bottom: 2vmin;
 }
 
 @media all and (min-width: 767px) {
-  .itemImage {
+  .itemImageWrapper {
     height: 300px;
   }
 }
 
 @media all and (min-width: 991px) {
-  .itemImage {
+  .itemImageWrapper {
     height: 400px;
   }
 }

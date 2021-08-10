@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import cn from "classnames";
 
 import classes from "./index.module.css";
@@ -19,33 +20,15 @@ export default function Home() {
       <section className={classes.itemsContainer}>
         <section className={classes.itemContainer}>
           <div className={classes.itemContainerWrapper}>
-            <img
-              className={classes.itemImage}
-              sizes="(max-width: 812px) 100vw, 812px"
-              srcSet="
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_200.png 200w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_265.png 265w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_316.png 316w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_362.png 362w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_406.png 406w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_447.png 447w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_485.png 485w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_517.png 517w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_550.png 550w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_580.png 580w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_610.png 610w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_639.png 639w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_666.png 666w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_691.png 691w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_720.png 720w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_746.png 746w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_774.png 774w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_801.png 801w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_809.png 809w,
-                /images/items/asteroid/item-asteroid_h7wtml_c_scale,w_812.png 812w"
-              src="/images/items/asteroid/item-asteroid_h7wtml_c_scale,w_812.png"
-              alt="Asteroid"
-            />
+            <div className={classes.itemImageWrapper}>
+              <Image
+                className={classes.itemImage}
+                src="/images/items/asteroid/item-asteroid_h7wtml_c_scale,w_812.png"
+                layout="fill"
+                objectFit="contain"
+                alt="Asteroid"
+              />
+            </div>
             <div className={classes.itemHeaderWrapper}>
               <header className={cn(classes.itemHeader, classes.asteroid)}>
                 asteroid
@@ -65,32 +48,15 @@ export default function Home() {
         </section>
         <section className={classes.itemContainer}>
           <div className={classes.itemContainerWrapper}>
-            <img
-              className={classes.itemImage}
-              sizes="(max-width: 844px) 100vw, 844px"
-              srcSet="
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_200.png 200w,
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_269.png 269w,
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_326.png 326w,
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_372.png 372w,
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_419.png 419w,
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_482.png 482w,
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_492.png 492w,
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_523.png 523w,
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_565.png 565w,
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_605.png 605w,
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_628.png 628w,
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_683.png 683w,
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_686.png 686w,
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_731.png 731w,
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_749.png 749w,
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_759.png 759w,
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_816.png 816w,
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_831.png 831w,
-                /images/items/orbit/orbit_x5nsrq_c_scale,w_844.png 844w"
-              src="/images/items/orbit/orbit_x5nsrq_c_scale,w_844.png"
-              alt="Around the Orbit"
-            />
+            <div className={classes.itemImageWrapper}>
+              <Image
+                className={classes.itemImage}
+                src="/images/items/orbit/orbit_x5nsrq_c_scale,w_844.png"
+                layout="fill"
+                objectFit="contain"
+                alt="Around the Orbit"
+              />
+            </div>
             <div className={classes.itemHeaderWrapper}>
               <header className={cn(classes.itemHeader, classes.orbit)}>
                 around the orbit
@@ -111,32 +77,15 @@ export default function Home() {
         </section>
         <section className={classes.itemContainer}>
           <div className={classes.itemContainerWrapper}>
-            <img
-              className={classes.itemImage}
-              sizes="(max-width: 818px) 100vw, 818px"
-              srcSet="
-                /images/items/jam/jam_o32jgj_c_scale,w_200.png 200w,
-                /images/items/jam/jam_o32jgj_c_scale,w_263.png 263w,
-                /images/items/jam/jam_o32jgj_c_scale,w_315.png 315w,
-                /images/items/jam/jam_o32jgj_c_scale,w_368.png 368w,
-                /images/items/jam/jam_o32jgj_c_scale,w_405.png 405w,
-                /images/items/jam/jam_o32jgj_c_scale,w_408.png 408w,
-                /images/items/jam/jam_o32jgj_c_scale,w_484.png 484w,
-                /images/items/jam/jam_o32jgj_c_scale,w_526.png 526w,
-                /images/items/jam/jam_o32jgj_c_scale,w_545.png 545w,
-                /images/items/jam/jam_o32jgj_c_scale,w_581.png 581w,
-                /images/items/jam/jam_o32jgj_c_scale,w_610.png 610w,
-                /images/items/jam/jam_o32jgj_c_scale,w_645.png 645w,
-                /images/items/jam/jam_o32jgj_c_scale,w_702.png 702w,
-                /images/items/jam/jam_o32jgj_c_scale,w_731.png 731w,
-                /images/items/jam/jam_o32jgj_c_scale,w_763.png 763w,
-                /images/items/jam/jam_o32jgj_c_scale,w_806.png 806w,
-                /images/items/jam/jam_o32jgj_c_scale,w_802.png 802w,
-                /images/items/jam/jam_o32jgj_c_scale,w_812.png 812w,
-                /images/items/jam/jam_o32jgj_c_scale,w_818.png 818w"
-              src="/images/items/jam/jam_o32jgj_c_scale,w_818.png"
-              alt="Space Jam"
-            />
+            <div className={classes.itemImageWrapper}>
+              <Image
+                className={classes.itemImage}
+                src="/images/items/jam/jam_o32jgj_c_scale,w_818.png"
+                layout="fill"
+                objectFit="contain"
+                alt="Space Jam"
+              />
+            </div>
             <div className={classes.itemHeaderWrapper}>
               <header className={cn(classes.itemHeader, classes.jam)}>
                 space jam
@@ -157,32 +106,15 @@ export default function Home() {
         </section>
         <section className={classes.itemContainer}>
           <div className={classes.itemContainerWrapper}>
-            <img
-              className={classes.itemImage}
-              sizes="(max-width: 884px) 100vw, 884px"
-              srcSet="
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_200.png 200w,
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_275.png 275w,
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_337.png 337w,
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_394.png 394w,
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_440.png 440w,
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_480.png 480w,
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_518.png 518w,
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_556.png 556w,
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_599.png 599w,
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_627.png 627w,
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_661.png 661w,
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_695.png 695w,
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_731.png 731w,
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_758.png 758w,
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_797.png 797w,
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_823.png 823w,
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_847.png 847w,
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_872.png 872w,
-                /images/items/dreams/dreams_e4tfrc_c_scale,w_884.png 884w"
-              src="/images/items/dreams/dreams_e4tfrc_c_scale,w_884.png"
-              alt="Moon Dreams"
-            />
+            <div className={classes.itemImageWrapper}>
+              <Image
+                className={classes.itemImage}
+                src="/images/items/dreams/dreams_e4tfrc_c_scale,w_884.png"
+                layout="fill"
+                objectFit="contain"
+                alt="Moon Dreams"
+              />
+            </div>
             <div className={classes.itemHeaderWrapper}>
               <header className={cn(classes.itemHeader, classes.dreams)}>
                 moon dreams
@@ -203,33 +135,15 @@ export default function Home() {
         </section>
         <section className={classes.itemContainer}>
           <div className={classes.itemContainerWrapper}>
-            <img
-              className={classes.itemImage}
-              sizes="(max-width: 890px) 100vw, 890px"
-              srcSet="
-                /images/items/gravity/gravity_zbngh9_c_scale,w_200.png 200w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_271.png 271w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_325.png 325w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_380.png 380w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_426.png 426w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_469.png 469w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_514.png 514w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_551.png 551w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_582.png 582w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_620.png 620w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_654.png 654w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_684.png 684w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_718.png 718w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_751.png 751w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_781.png 781w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_808.png 808w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_843.png 843w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_865.png 865w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_887.png 887w,
-                /images/items/gravity/gravity_zbngh9_c_scale,w_890.png 890w"
-              src="/images/items/gravity/gravity_zbngh9_c_scale,w_890.png"
-              alt="Zero Gravity"
-            />
+            <div className={classes.itemImageWrapper}>
+              <Image
+                className={classes.itemImage}
+                src="/images/items/gravity/gravity_zbngh9_c_scale,w_890.png"
+                layout="fill"
+                objectFit="contain"
+                alt="Zero Gravity"
+              />
+            </div>
             <div className={classes.itemHeaderWrapper}>
               <header className={cn(classes.itemHeader, classes.gravity)}>
                 zero gravity
