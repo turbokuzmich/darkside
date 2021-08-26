@@ -23,7 +23,7 @@ export default function Home() {
             <div className={classes.itemImageWrapper}>
               <Image
                 className={classes.itemImage}
-                src="/images/items/asteroid/item-asteroid_h7wtml_c_scale,w_812.png"
+                src="/images/items/asteroid/item-asteroid_h7wtml_c_scale,w_200.png"
                 layout="fill"
                 objectFit="contain"
                 alt="Asteroid"
@@ -51,7 +51,7 @@ export default function Home() {
             <div className={classes.itemImageWrapper}>
               <Image
                 className={classes.itemImage}
-                src="/images/items/orbit/orbit_x5nsrq_c_scale,w_844.png"
+                src="/images/items/orbit/orbit_x5nsrq_c_scale,w_200.png"
                 layout="fill"
                 objectFit="contain"
                 alt="Around the Orbit"
@@ -80,7 +80,7 @@ export default function Home() {
             <div className={classes.itemImageWrapper}>
               <Image
                 className={classes.itemImage}
-                src="/images/items/jam/jam_o32jgj_c_scale,w_818.png"
+                src="/images/items/jam/jam_o32jgj_c_scale,w_200.png"
                 layout="fill"
                 objectFit="contain"
                 alt="Space Jam"
@@ -109,7 +109,7 @@ export default function Home() {
             <div className={classes.itemImageWrapper}>
               <Image
                 className={classes.itemImage}
-                src="/images/items/dreams/dreams_e4tfrc_c_scale,w_884.png"
+                src="/images/items/dreams/dreams_e4tfrc_c_scale,w_200.png"
                 layout="fill"
                 objectFit="contain"
                 alt="Moon Dreams"
@@ -138,7 +138,7 @@ export default function Home() {
             <div className={classes.itemImageWrapper}>
               <Image
                 className={classes.itemImage}
-                src="/images/items/gravity/gravity_zbngh9_c_scale,w_890.png"
+                src="/images/items/gravity/gravity_zbngh9_c_scale,w_200.png"
                 layout="fill"
                 objectFit="contain"
                 alt="Zero Gravity"

@@ -1,19 +1,22 @@
 .container {
   padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .descriptionHeader {
   font-family: var(--font-russo);
   color: var(--color-asteroid);
   text-align: center;
-  font-size: 3vmin;
+  font-size: 4vmin;
   padding-top: 6vmin;
   text-transform: uppercase;
 }
 
 .logoHeader {
   font-family: "Another America", sans-serif;
-  color: var(--color-red);
+  color: var(--color-orbit);
   text-align: center;
   font-size: 15vmin;
 }
@@ -24,6 +27,7 @@
   flex-wrap: wrap;
   margin-left: -24px;
   margin-right: -24px;
+  max-width: 1280px;
 }
 
 .itemContainer {
@@ -46,8 +50,8 @@
   left: 8px;
   right: 8px;
   bottom: 8px;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(7px);
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
 }
 
 @media all and (min-width: 575px) {
@@ -79,31 +83,16 @@
   height: 250px;
   display: block;
   position: relative;
-  margin-bottom: 2vmin;
-}
-
-@media all and (min-width: 767px) {
-  .itemImageWrapper {
-    height: 300px;
-  }
-}
-
-@media all and (min-width: 991px) {
-  .itemImageWrapper {
-    height: 400px;
-  }
+  margin-bottom: 1rem;
 }
 
 .itemHeaderWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 18vmin;
+  margin-bottom: 1rem;
 }
 
 .itemHeader {
-  font-size: 7vmin;
-  line-height: 9vmin;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
   font-family: var(--font-russo);
   text-transform: uppercase;
 }
@@ -124,34 +113,46 @@
 }
 @media all and (min-width: 575px) {
   .itemHeader {
-    font-size: 3.5vmin;
-    line-height: 4.5vmin;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .itemHeaderWrapper {
-    height: 9vmin;
-    margin-bottom: 1vmin;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 3rem;
+  }
+}
+@media all and (min-width: 767px) {
+  .itemHeader {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+  .itemHeaderWrapper {
+    height: 4.4rem;
+  }
+}
+@media all and (min-width: 991px) {
+  .itemHeader {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .itemHeaderWrapper {
+    height: 5rem;
   }
 }
 
 .itemCapacity {
-  font-size: 3.5vmin;
-  margin-bottom: 3vmin;
+  font-size: 1rem;
+  margin-bottom: 1rem;
   color: var(--color-grey);
-}
-@media all and (min-width: 575px) {
-  .itemCapacity {
-    font-size: 2vmin;
-  }
 }
 
 .itemDescription {
-  font-size: 4.5vmin;
+  font-size: 1rem;
+  line-height: 1.3rem;
   color: var(--color-grey);
-}
-@media all and (min-width: 575px) {
-  .itemDescription {
-    font-size: 2.5vmin;
-  }
 }
 
 .itemButtonWrapper {
@@ -168,9 +169,9 @@
   outline: none;
   border-style: solid;
   border-width: 2px;
-  font-size: 5vmin;
+  font-size: 1.2rem;
   font-weight: 600;
-  line-height: 8vmin;
+  line-height: 1.8rem;
   text-transform: uppercase;
 }
 .itemButton.asteroid {
@@ -192,12 +193,6 @@
 .itemButton.gravity {
   color: var(--color-gravity);
   border-color: var(--color-gravity);
-}
-@media all and (min-width: 575px) {
-  .itemButton {
-    font-size: 3vmin;
-    line-height: 5vmin;
-  }
 }
 
 .orderContainer {
@@ -258,7 +253,7 @@
 }
 
 .orderFormButton {
-  background-color: var(--color-red);
+  background-color: var(--color-orbit);
   margin: 0;
   border: none;
   color: var(--color-grey);

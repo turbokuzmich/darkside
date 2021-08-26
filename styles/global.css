@@ -9,12 +9,11 @@
 }
 
 body {
-  --color-asteroid: #92c149;
-  --color-orbit: #d83538;
-  --color-jam: #d6287c;
-  --color-dreams: #f7ea51;
-  --color-gravity: #2c94c3;
-  --color-red: #d53538;
+  --color-asteroid: #b0dc2d;
+  --color-orbit: #b41a2b;
+  --color-jam: #b40f5a;
+  --color-dreams: #adac23;
+  --color-gravity: #26d9fb;
   --color-grey: #bebebe;
 
   --font-russo: "Russo One", sans-serif;
@@ -23,6 +22,7 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
     url("../public/images/body-background.jpeg");
   background-position: 50% 0;
+  background-attachment: fixed;
   background-size: cover;
   font-family: "Open Sans", sans-serif;
 }
