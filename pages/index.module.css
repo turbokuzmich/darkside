@@ -21,6 +21,10 @@
   font-size: 15vmin;
 }
 
+.catalogContainer {
+  min-height: 100vh;
+}
+
 .itemsContainer {
   display: flex;
   flex-direction: row;
