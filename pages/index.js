@@ -1,19 +1,29 @@
-import { useCallback } from "react";
+import { useCallback, useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { Element, scroller } from "react-scroll";
 import cn from "classnames";
+import { getToken } from "../lib/csrf";
 
 import classes from "./index.module.css";
 
-export default function Home() {
-  const onItemBuyClicked = useCallback(() =>
+/**
+ *
+ * @param {Object} props
+ * @param {String} props.csrf
+ * @returns {React.Component}
+ */
+export default function Home({ csrf }) {
+  const emailFieldRef = useRef();
+
+  const onItemBuyClicked = useCallback(() => {
     scroller.scrollTo("orderContainer", {
       duration: 200,
       smooth: true,
       isDynamic: true,
-    })
-  );
+    });
+    emailFieldRef.current?.focus();
+  });
 
   return (
     <div className={classes.container}>
@@ -200,8 +210,9 @@ export default function Home() {
                 type="text"
                 name="email"
                 placeholder="Адрес электронной почты"
+                ref={emailFieldRef}
               />
-              <input type="hidden" name="_csrf" />
+              <input type="hidden" name="_csrf" value={csrf} />
               <button
                 className={cn(
                   classes.orderFormControl,
@@ -218,4 +229,12 @@ export default function Home() {
       </Element>
     </div>
   );
+}
+
+export function getServerSideProps() {
+  return {
+    props: {
+      csrf: getToken(),
+    },
+  };
 }
