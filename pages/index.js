@@ -1,11 +1,21 @@
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, useMemo, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
+import { Formik } from "formik";
 import { Element, scroller } from "react-scroll";
 import cn from "classnames";
+import axios from "axios";
+import * as yup from "yup";
 import { getToken } from "../lib/csrf";
 
 import classes from "./index.module.css";
+
+const validationSchema = yup.object().shape({
+  email: yup
+    .string()
+    .email("Пожалуйста, укажите правильный адрес электронной почты")
+    .required("Пожалуйста, укажите адрес электронной почты"),
+});
 
 /**
  *
@@ -16,6 +26,16 @@ import classes from "./index.module.css";
 export default function Home({ csrf }) {
   const emailFieldRef = useRef();
 
+  const initialOrderValues = useMemo(
+    () => ({
+      csrf,
+      email: "",
+    }),
+    [csrf]
+  );
+
+  const [orderState, setOrderState] = useState("initial");
+
   const onItemBuyClicked = useCallback(() => {
     scroller.scrollTo("orderContainer", {
       duration: 200,
@@ -23,7 +43,7 @@ export default function Home({ csrf }) {
       isDynamic: true,
     });
     emailFieldRef.current?.focus();
-  });
+  }, [emailFieldRef]);
 
   return (
     <div className={classes.container}>
@@ -197,33 +217,71 @@ export default function Home({ csrf }) {
       <Element name="orderContainer">
         <section className={classes.orderContainer}>
           <div className={classes.orderFormWrapper}>
-            <div className={classes.orderFormHeading}>
-              Просто оставьте нам свою почту
-            </div>
-            <form
-              action="/api/order"
-              method="post"
-              className={classes.orderForm}
-            >
-              <input
-                className={cn(classes.orderFormControl, classes.orderFormInput)}
-                type="text"
-                name="email"
-                placeholder="Адрес электронной почты"
-                ref={emailFieldRef}
-              />
-              <input type="hidden" name="_csrf" value={csrf} />
-              <button
-                className={cn(
-                  classes.orderFormControl,
-                  classes.orderFormButton
-                )}
-              >
-                отправить
-              </button>
-            </form>
-            <div className={classes.orderFormHeading}>или позвоните</div>
-            <div className={classes.orderFormPhone}>+7 926 385 37-51</div>
+            {orderState === "initial" ? (
+              <>
+                <div className={classes.orderFormHeading}>
+                  Просто оставьте нам свою почту
+                </div>
+                <Formik
+                  initialValues={initialOrderValues}
+                  validationSchema={validationSchema}
+                  onSubmit={async (data) => {
+                    await axios.post("/api/order", data);
+                    setOrderState("comlete");
+                  }}
+                >
+                  {(props) => (
+                    <form
+                      onSubmit={props.handleSubmit}
+                      action="/api/order"
+                      method="post"
+                      className={classes.orderForm}
+                    >
+                      <input
+                        className={cn(
+                          classes.orderFormControl,
+                          classes.orderFormInput
+                        )}
+                        type="text"
+                        name="email"
+                        placeholder="Адрес электронной почты"
+                        ref={emailFieldRef}
+                        onChange={props.handleChange}
+                        onBlur={props.handleBlur}
+                        value={props.values.email}
+                      />
+                      {props.errors.email && props.touched.email ? (
+                        <div className={classes.orderFormError}>
+                          {props.errors.email}
+                        </div>
+                      ) : null}
+                      <input
+                        type="hidden"
+                        name="_csrf"
+                        value={props.values.csrf}
+                      />
+                      <button
+                        className={cn(
+                          classes.orderFormControl,
+                          classes.orderFormButton
+                        )}
+                        disabled={props.isSubmitting}
+                      >
+                        отправить
+                      </button>
+                    </form>
+                  )}
+                </Formik>
+                <div className={classes.orderFormHeading}>или позвоните</div>
+                <div className={classes.orderFormPhone}>+7 926 385 37-51</div>
+              </>
+            ) : (
+              <>
+                <div className={cn(classes.orderFormHeading, classes.noMargin)}>
+                  Спасибо! Мы скоро свяжемся с вами.
+                </div>
+              </>
+            )}
           </div>
         </section>
       </Element>
