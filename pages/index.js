@@ -80,6 +80,7 @@ export default function Home({ csrf }) {
               </div>
             </div>
             <div className={classes.itemButtonWrapper}>
+              <div className={cn(classes.price, classes.asteroid)}>490 / 690 руб.</div>
               <button
                 className={cn(classes.itemButton, classes.asteroid)}
                 onClick={onItemBuyClicked}
@@ -111,6 +112,7 @@ export default function Home({ csrf }) {
               </div>
             </div>
             <div className={classes.itemButtonWrapper}>
+              <div className={cn(classes.price, classes.orbit)}>490 / 690 руб.</div>
               <button
                 className={cn(classes.itemButton, classes.orbit)}
                 onClick={onItemBuyClicked}
@@ -142,6 +144,7 @@ export default function Home({ csrf }) {
               </div>
             </div>
             <div className={classes.itemButtonWrapper}>
+              <div className={cn(classes.price, classes.jam)}>490 / 690 руб.</div>
               <button
                 className={cn(classes.itemButton, classes.jam)}
                 onClick={onItemBuyClicked}
@@ -173,6 +176,7 @@ export default function Home({ csrf }) {
               </div>
             </div>
             <div className={classes.itemButtonWrapper}>
+              <div className={cn(classes.price, classes.dreams)}>490 / 690 руб.</div>
               <button
                 className={cn(classes.itemButton, classes.dreams)}
                 onClick={onItemBuyClicked}
@@ -204,6 +208,7 @@ export default function Home({ csrf }) {
               </div>
             </div>
             <div className={classes.itemButtonWrapper}>
+              <div className={cn(classes.price, classes.gravity)}>490 / 690 руб.</div>
               <button
                 className={cn(classes.itemButton, classes.gravity)}
                 onClick={onItemBuyClicked}

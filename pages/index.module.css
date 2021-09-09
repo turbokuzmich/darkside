@@ -166,6 +166,29 @@
   align-items: stretch;
 }
 
+.price {
+  color: var(--color-grey);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+  text-align: center;
+}
+.price.asteroid {
+  color: var(--color-asteroid);
+}
+.price.orbit {
+  color: var(--color-orbit);
+}
+.price.jam {
+  color: var(--color-jam);
+}
+.price.dreams {
+  color: var(--color-dreams);
+}
+.price.gravity {
+  color: var(--color-gravity);
+}
+
 .itemButton {
   background-color: transparent;
   margin: 0;
